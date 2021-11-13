@@ -1,0 +1,28 @@
+{
+  "name": "web-scrapper-api",
+  "version": "1.0.0",
+  "description": "It returns a list of domain related URLs and the result of a DOM query",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/operezol/web-scrapper-api.git"
+  },
+  "keywords": [
+    "web",
+    "scrapper",
+    "api"
+  ],
+  "author": "Oriol Pérez Olivares",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/operezol/web-scrapper-api/issues"
+  },
+  "homepage": "https://github.com/operezol/web-scrapper-api#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "puppeteer": "^11.0.0"
+  }
+}
