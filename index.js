@@ -1,9 +1,6 @@
-const PORT = process.env.port || 8000;
 const express = require('express');
 const puppeteer = require("puppeteer");
-
 const app = express();
-
 const getData = async (url, DOMQuery) => {
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
@@ -20,11 +17,12 @@ const getData = async (url, DOMQuery) => {
     await browser.close();
     return { urls, DOMQueryResult };
 };
-
 app.get('/', async (request, response) => {
     const { url, DOMQuery } = request.query;
     const data = await getData(url, DOMQuery);
     response.json(data);
 });
-
-app.listen(PORT, () => console.log(`server running on port: ${PORT}`));
+const server = app.listen(process.env.PORT || 5000, () => {
+    let port = server.address().port;
+    console.log(`server running on port: ${port}`)
+});
