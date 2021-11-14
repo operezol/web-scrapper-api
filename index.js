@@ -22,7 +22,6 @@ const getData = async (url, DOMQuery) => {
 }
 
 app.get('/',async(request,response)=>{
-    console.log(request.query)
     const {url, DOMQuery} = request.query;
     const data = await getData(url,DOMQuery)
     response.json(data)
