@@ -22,7 +22,7 @@ app.get('/', async (request, response) => {
     const data = await getData(url, DOMQuery);
     response.json(data);
 });
-const server = app.listen(process.env.PORT || 5000, () => {
+const server = app.listen(process.env.PORT || 24732, () => {
     let port = server.address().port;
     console.log(`server running on port: ${port}`)
 });

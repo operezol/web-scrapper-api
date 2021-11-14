@@ -4,7 +4,7 @@
   "description": "It returns a list of domain related URLs and the result of a DOM query",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
