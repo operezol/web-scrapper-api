@@ -27,7 +27,7 @@ const getData = async (url, DOMQuery) => {
         return { urls, DOMQueryResult };
     } catch (error) {
         console.log(error);
-        return {error};
+        return error.toString();
     }
 
 };
